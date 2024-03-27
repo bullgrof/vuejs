@@ -13,10 +13,11 @@
       const vm = Vue.createApp({
         data() {
           return {
-            text: "Hola Fredy",
+            img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/23.png",
           };
         },
-        template: `<div v-once v-text="text"></div>`,
+        template: `<img v-bind:src="img" v-bind:alt="img">`,
+        //template: `<div v-once v-text="text"></div>`,
       }).mount("#app"); //Toma la instancia de vue y crea una nueva app
       console.log(vm);
     </script>
